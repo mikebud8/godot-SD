@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="SockingDingers"
-run/main_scene="res://src/Player.tscn"
+run/main_scene="res://src/menus/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [gdnative]
