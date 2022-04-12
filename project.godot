@@ -24,6 +24,10 @@ config/name="SockingDingers"
 run/main_scene="res://src/menus/TitleScreen.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1200
+
 [gdnative]
 
 singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]

@@ -1,0 +1,192 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/batterCardHeader.tres" type="Theme" id=1]
+[ext_resource path="res://assets/batterCardBody.tres" type="Theme" id=2]
+
+[node name="PitcherCard" type="Node2D"]
+
+[node name="PCContainer" type="VBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="PlayerName" type="Label" parent="PCContainer"]
+margin_right = 101.0
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+text = "Player Name"
+
+[node name="PlayerInfo" type="HBoxContainer" parent="PCContainer"]
+margin_top = 23.0
+margin_right = 101.0
+margin_bottom = 171.0
+
+[node name="Attributes" type="VBoxContainer" parent="PCContainer/PlayerInfo"]
+margin_right = 47.0
+margin_bottom = 148.0
+
+[node name="PitcherType" type="Label" parent="PCContainer/PlayerInfo/Attributes"]
+margin_right = 47.0
+margin_bottom = 15.0
+theme = ExtResource( 2 )
+
+[node name="AttrDivider" type="HBoxContainer" parent="PCContainer/PlayerInfo/Attributes"]
+margin_top = 19.0
+margin_right = 47.0
+margin_bottom = 72.0
+
+[node name="AttrLabels" type="VBoxContainer" parent="PCContainer/PlayerInfo/Attributes/AttrDivider"]
+margin_right = 43.0
+margin_bottom = 53.0
+
+[node name="controlLabel" type="Label" parent="PCContainer/PlayerInfo/Attributes/AttrDivider/AttrLabels"]
+margin_right = 43.0
+margin_bottom = 15.0
+theme = ExtResource( 2 )
+text = "Control:"
+
+[node name="inningsLabel" type="Label" parent="PCContainer/PlayerInfo/Attributes/AttrDivider/AttrLabels"]
+margin_top = 19.0
+margin_right = 43.0
+margin_bottom = 34.0
+theme = ExtResource( 2 )
+text = "IP:"
+
+[node name="costLabel" type="Label" parent="PCContainer/PlayerInfo/Attributes/AttrDivider/AttrLabels"]
+margin_top = 38.0
+margin_right = 43.0
+margin_bottom = 53.0
+theme = ExtResource( 2 )
+text = "Cost:"
+
+[node name="AttrValues" type="VBoxContainer" parent="PCContainer/PlayerInfo/Attributes/AttrDivider"]
+margin_left = 47.0
+margin_right = 47.0
+margin_bottom = 53.0
+
+[node name="onBase" type="Label" parent="PCContainer/PlayerInfo/Attributes/AttrDivider/AttrValues"]
+margin_bottom = 15.0
+theme = ExtResource( 2 )
+
+[node name="innings" type="Label" parent="PCContainer/PlayerInfo/Attributes/AttrDivider/AttrValues"]
+margin_top = 19.0
+margin_bottom = 34.0
+theme = ExtResource( 2 )
+
+[node name="cost" type="Label" parent="PCContainer/PlayerInfo/Attributes/AttrDivider/AttrValues"]
+margin_top = 38.0
+margin_bottom = 53.0
+theme = ExtResource( 2 )
+
+[node name="RollTable" type="VBoxContainer" parent="PCContainer/PlayerInfo"]
+margin_left = 51.0
+margin_right = 101.0
+margin_bottom = 148.0
+
+[node name="RollTableDivider" type="HBoxContainer" parent="PCContainer/PlayerInfo/RollTable"]
+margin_right = 50.0
+margin_bottom = 148.0
+
+[node name="RollTableLabels" type="VBoxContainer" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider"]
+margin_right = 46.0
+margin_bottom = 148.0
+
+[node name="poLabel" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_right = 46.0
+margin_bottom = 15.0
+theme = ExtResource( 2 )
+text = "Out(PO):"
+
+[node name="soLabel" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 19.0
+margin_right = 46.0
+margin_bottom = 34.0
+theme = ExtResource( 2 )
+text = "Out(SO):"
+
+[node name="gbLabel" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 38.0
+margin_right = 46.0
+margin_bottom = 53.0
+theme = ExtResource( 2 )
+text = "Out(GB):"
+
+[node name="fbLabel" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 57.0
+margin_right = 46.0
+margin_bottom = 72.0
+theme = ExtResource( 2 )
+text = "Out(FB):"
+
+[node name="walkLabel" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 76.0
+margin_right = 46.0
+margin_bottom = 91.0
+theme = ExtResource( 2 )
+text = "Walk:"
+
+[node name="singleLabel" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 95.0
+margin_right = 46.0
+margin_bottom = 110.0
+theme = ExtResource( 2 )
+text = "Single:"
+
+[node name="doubleLabel" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 114.0
+margin_right = 46.0
+margin_bottom = 129.0
+theme = ExtResource( 2 )
+text = "Double:"
+
+[node name="dingerLabel" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 133.0
+margin_right = 46.0
+margin_bottom = 148.0
+theme = ExtResource( 2 )
+text = "Dinger:"
+
+[node name="RollTableRanges" type="VBoxContainer" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider"]
+margin_left = 50.0
+margin_right = 50.0
+margin_bottom = 148.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="poRange" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_bottom = 15.0
+theme = ExtResource( 2 )
+
+[node name="soRange" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 19.0
+margin_bottom = 34.0
+theme = ExtResource( 2 )
+
+[node name="gbRange" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 38.0
+margin_bottom = 53.0
+theme = ExtResource( 2 )
+
+[node name="fbRange" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 57.0
+margin_bottom = 72.0
+theme = ExtResource( 2 )
+
+[node name="walkRange" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 76.0
+margin_bottom = 91.0
+theme = ExtResource( 2 )
+
+[node name="singleRange" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 95.0
+margin_bottom = 110.0
+theme = ExtResource( 2 )
+
+[node name="doubleRange" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 114.0
+margin_bottom = 129.0
+theme = ExtResource( 2 )
+
+[node name="dingerRange" type="Label" parent="PCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 133.0
+margin_bottom = 148.0
+theme = ExtResource( 2 )

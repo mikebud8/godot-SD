@@ -1,0 +1,248 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/batterCardHeader.tres" type="Theme" id=1]
+[ext_resource path="res://assets/batterCardBody.tres" type="Theme" id=2]
+
+[node name="BatterCard" type="Node2D"]
+
+[node name="BCContainer" type="VBoxContainer" parent="."]
+margin_right = 160.0
+margin_bottom = 190.0
+
+[node name="PlayerName" type="Label" parent="BCContainer"]
+margin_right = 166.0
+margin_bottom = 19.0
+theme = ExtResource( 1 )
+text = "Player Name"
+
+[node name="PlayerInfo" type="HBoxContainer" parent="BCContainer"]
+margin_top = 23.0
+margin_right = 166.0
+margin_bottom = 190.0
+
+[node name="Attributes" type="VBoxContainer" parent="BCContainer/PlayerInfo"]
+margin_right = 80.0
+margin_bottom = 167.0
+
+[node name="AttrDivider" type="HBoxContainer" parent="BCContainer/PlayerInfo/Attributes"]
+margin_right = 80.0
+margin_bottom = 53.0
+
+[node name="AttrLabels" type="VBoxContainer" parent="BCContainer/PlayerInfo/Attributes/AttrDivider"]
+margin_right = 48.0
+margin_bottom = 53.0
+
+[node name="onBaseLabel" type="Label" parent="BCContainer/PlayerInfo/Attributes/AttrDivider/AttrLabels"]
+margin_right = 48.0
+margin_bottom = 15.0
+theme = ExtResource( 2 )
+text = "On Base:"
+
+[node name="speedLabel" type="Label" parent="BCContainer/PlayerInfo/Attributes/AttrDivider/AttrLabels"]
+margin_top = 19.0
+margin_right = 48.0
+margin_bottom = 34.0
+theme = ExtResource( 2 )
+text = "Speed:"
+
+[node name="costLabel" type="Label" parent="BCContainer/PlayerInfo/Attributes/AttrDivider/AttrLabels"]
+margin_top = 38.0
+margin_right = 48.0
+margin_bottom = 53.0
+theme = ExtResource( 2 )
+text = "Cost:"
+
+[node name="AttrValues" type="VBoxContainer" parent="BCContainer/PlayerInfo/Attributes/AttrDivider"]
+margin_left = 52.0
+margin_right = 80.0
+margin_bottom = 53.0
+
+[node name="onBase" type="Label" parent="BCContainer/PlayerInfo/Attributes/AttrDivider/AttrValues"]
+margin_right = 28.0
+margin_bottom = 15.0
+theme = ExtResource( 2 )
+text = "1234"
+
+[node name="speed" type="Label" parent="BCContainer/PlayerInfo/Attributes/AttrDivider/AttrValues"]
+margin_top = 19.0
+margin_right = 28.0
+margin_bottom = 34.0
+theme = ExtResource( 2 )
+
+[node name="cost" type="Label" parent="BCContainer/PlayerInfo/Attributes/AttrDivider/AttrValues"]
+margin_top = 38.0
+margin_right = 28.0
+margin_bottom = 53.0
+theme = ExtResource( 2 )
+
+[node name="positions" type="VBoxContainer" parent="BCContainer/PlayerInfo/Attributes"]
+margin_top = 57.0
+margin_right = 80.0
+margin_bottom = 148.0
+
+[node name="position1" type="Label" parent="BCContainer/PlayerInfo/Attributes/positions"]
+margin_right = 80.0
+margin_bottom = 15.0
+theme = ExtResource( 2 )
+
+[node name="position2" type="Label" parent="BCContainer/PlayerInfo/Attributes/positions"]
+margin_top = 19.0
+margin_right = 80.0
+margin_bottom = 34.0
+theme = ExtResource( 2 )
+
+[node name="position3" type="Label" parent="BCContainer/PlayerInfo/Attributes/positions"]
+margin_top = 38.0
+margin_right = 80.0
+margin_bottom = 53.0
+theme = ExtResource( 2 )
+
+[node name="position4" type="Label" parent="BCContainer/PlayerInfo/Attributes/positions"]
+margin_top = 57.0
+margin_right = 80.0
+margin_bottom = 72.0
+theme = ExtResource( 2 )
+
+[node name="position5" type="Label" parent="BCContainer/PlayerInfo/Attributes/positions"]
+margin_top = 76.0
+margin_right = 80.0
+margin_bottom = 91.0
+theme = ExtResource( 2 )
+
+[node name="RollTable" type="VBoxContainer" parent="BCContainer/PlayerInfo"]
+margin_left = 84.0
+margin_right = 166.0
+margin_bottom = 167.0
+
+[node name="RollTableDivider" type="HBoxContainer" parent="BCContainer/PlayerInfo/RollTable"]
+margin_right = 82.0
+margin_bottom = 167.0
+
+[node name="RollTableLabels" type="VBoxContainer" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider"]
+margin_right = 46.0
+margin_bottom = 167.0
+
+[node name="soLabel" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_right = 46.0
+margin_bottom = 15.0
+theme = ExtResource( 2 )
+text = "Out(SO):"
+
+[node name="gbLabel" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 19.0
+margin_right = 46.0
+margin_bottom = 34.0
+theme = ExtResource( 2 )
+text = "Out(GB):"
+
+[node name="fbLabel" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 38.0
+margin_right = 46.0
+margin_bottom = 53.0
+theme = ExtResource( 2 )
+text = "Out(FB):"
+
+[node name="walkLabel" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 57.0
+margin_right = 46.0
+margin_bottom = 72.0
+theme = ExtResource( 2 )
+text = "Walk:"
+
+[node name="singleLabel" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 76.0
+margin_right = 46.0
+margin_bottom = 91.0
+theme = ExtResource( 2 )
+text = "Single:"
+
+[node name="sPlusLabel" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 95.0
+margin_right = 46.0
+margin_bottom = 110.0
+theme = ExtResource( 2 )
+text = "Single+:"
+
+[node name="doubleLabel" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 114.0
+margin_right = 46.0
+margin_bottom = 129.0
+theme = ExtResource( 2 )
+text = "Double:"
+
+[node name="tripleLabel" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 133.0
+margin_right = 46.0
+margin_bottom = 148.0
+theme = ExtResource( 2 )
+text = "Triple:"
+
+[node name="dingerLabel" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableLabels"]
+margin_top = 152.0
+margin_right = 46.0
+margin_bottom = 167.0
+theme = ExtResource( 2 )
+text = "Dinger:"
+
+[node name="RollTableRanges" type="VBoxContainer" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider"]
+margin_left = 50.0
+margin_right = 82.0
+margin_bottom = 167.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="soRange" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_right = 32.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource( 2 )
+
+[node name="gbRange" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 19.0
+margin_right = 32.0
+margin_bottom = 34.0
+theme = ExtResource( 2 )
+
+[node name="fbRange" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 38.0
+margin_right = 32.0
+margin_bottom = 53.0
+theme = ExtResource( 2 )
+
+[node name="walkRange" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 57.0
+margin_right = 32.0
+margin_bottom = 72.0
+theme = ExtResource( 2 )
+
+[node name="singleRange" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 76.0
+margin_right = 32.0
+margin_bottom = 91.0
+theme = ExtResource( 2 )
+
+[node name="sPlusRange" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 95.0
+margin_right = 32.0
+margin_bottom = 110.0
+theme = ExtResource( 2 )
+
+[node name="doubleRange" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 114.0
+margin_right = 32.0
+margin_bottom = 129.0
+theme = ExtResource( 2 )
+
+[node name="tripleRange" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 133.0
+margin_right = 32.0
+margin_bottom = 148.0
+theme = ExtResource( 2 )
+
+[node name="dingerRange" type="Label" parent="BCContainer/PlayerInfo/RollTable/RollTableDivider/RollTableRanges"]
+margin_top = 152.0
+margin_right = 32.0
+margin_bottom = 167.0
+theme = ExtResource( 2 )
+text = "17-20"
